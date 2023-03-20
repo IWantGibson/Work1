@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入您的数据："
+        android:textSize="30dp"
+        />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:hint="身高(m)"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:hint="体重(kg)"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:text="计算" />
+
+    <TextView
+        android:id="@+id/jieguo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="此处显示结果"
+        android:textSize="25dp" />
+
+</LinearLayout>
