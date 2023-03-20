@@ -30,13 +30,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     @Override
     public void onClick(View view) {
-        String shengao=edit1.getText().toString(); double sg=Double.parseDouble(shengao);
-        String tizhong=edit2.getText().toString(); double tz=Double.parseDouble(tizhong);
-        double bim3=tz/(sg*sg);
-        double bim=Double.parseDouble(format("%.2f",bim3));
-        if(bim<=18.5){jieguo.setText("您的bim值为"+bim+"，属于偏瘦身材，多吃点！要猛！");}
-        if((bim<25)&&(bim>18.5)){jieguo.setText("您的bim值为"+bim+"，属于标准身材！继续保持");}
-        if(bim>=25){jieguo.setText("您的bim值为"+bim+"，属于偏胖身材，少吃点！要猛！");}
-
+        try {
+            String shengao = edit1.getText().toString();
+            double sg = Double.parseDouble(shengao);
+            String tizhong = edit2.getText().toString();
+            double tz = Double.parseDouble(tizhong);
+            double bim3 = tz / (sg * sg);
+            double bim = Double.parseDouble(format("%.2f", bim3));
+            if (bim <= 18.5) {
+                jieguo.setText("您的bim值为" + bim + "，属于偏瘦身材，多吃点！要猛！");
+            }
+            if ((bim < 25) && (bim > 18.5)) {
+                jieguo.setText("您的bim值为" + bim + "，属于标准身材！继续保持");
+            }
+            if (bim >= 25) {
+                jieguo.setText("您的bim值为" + bim + "，属于偏胖身材，少吃点！要猛！");
+            }
+        }
+        catch(NumberFormatException exception){
+            jieguo.setText("输入类型错误");
+        }
     }
 }
